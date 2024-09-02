@@ -5,4 +5,4 @@ jobs:
   Explore-GitHub-Action:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "run create ${{ github.base_ref }}"
+      - run: echo "run create ${{ github.repository }}"
