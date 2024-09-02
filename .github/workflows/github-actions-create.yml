@@ -7,4 +7,4 @@ jobs:
     steps:
       - run: echo "run create ${{ github.repository }}"
       - run: echo "run next"
-      - run: echo "run last"
+      - run: echo "run last."
