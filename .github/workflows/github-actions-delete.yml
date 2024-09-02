@@ -1,0 +1,10 @@
+name: GitHub Actions delete
+run-name: ${{ github.actor }} is delete action
+on: [delete]
+jobs:
+  Delete-GitHub-Action:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "run ${{ github.action }} operate."
+      - run: echo "run next"
+      - run: echo "run last."
