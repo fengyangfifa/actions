@@ -1,0 +1,12 @@
+name: GitHub Actions pull
+run-name: ${{ github.actor }} is pull2 action
+on:
+  pull_request:
+    types:
+      - opened
+jobs:
+  run_if:
+    if: startsWith(github.head_ref, 'releases/')
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "the head of this PR starts with "releases/"
