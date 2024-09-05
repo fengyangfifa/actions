@@ -1,0 +1,10 @@
+name: GitHub Actions create
+run-name: ${{ github.actor }} is create action
+on: [create]
+jobs:
+  Explore-GitHub-Action:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "run create ${{ github.repository }}"
+      - run: echo "run next"
+      - run: echo "run last."
