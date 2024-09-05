@@ -1,0 +1,13 @@
+name: GitHub Actions pull
+run-name: ${{ github.actor }} is pluu action
+on:
+  pull_request:
+    types:
+      - opened
+    branches:
+      - "master"
+jobs:
+  Explore-GitHub-Pull-Action:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "run pull ${{ github.head_ref }}"
