@@ -9,12 +9,17 @@ jobs:
         id: color-selector
         run: |
           echo "SELECTED_COLOR=red" >> $GITHUB_OUTPUT
+          echo "The set color is $SELECTED_COLOR"
           echo "### Hello World! :rocket:" >> $GITHUB_STEP_SUMMARY
 
       - name: Get color
         env:
           SELECTED_COLOR: ${{ steps.color-selector.outputs.SELECTED_COLOR }}
-        run: echo "The selected color is $SELECTED_COLOR"
+        run: |
+          echo "The selected color is $SELECTED_COLOR"
+          echo "### Hello World2! :rocket:" >> $GITHUB_STEP_SUMMARY
 
       - name: GET env
-        run: echo "The selected color env is $SELECTED_COLOR"
+        run: |
+          echo "The selected color env is $SELECTED_COLOR"
+          echo "### last step! :rocket:" >> $GITHUB_STEP_SUMMARY
