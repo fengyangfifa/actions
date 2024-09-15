@@ -7,7 +7,9 @@ jobs:
     steps:
       - name: Set color
         id: color-selector
-        run: echo "SELECTED_COLOR=red" >> $GITHUB_OUTPUT
+        run: |
+          echo "SELECTED_COLOR=red" >> $GITHUB_OUTPUT
+          echo "### Hello World! :rocket:" >> $GITHUB_STEP_SUMMARY
 
       - name: Get color
         env:
