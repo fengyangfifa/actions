@@ -9,7 +9,7 @@ jobs:
         id: color-selector
         run: |
           echo "SELECTED_COLOR=red" >> $GITHUB_OUTPUT
-          echo "The set color is $SELECTED_COLOR"
+          echo "The set color is ${{ steps.color-selector.outputs.SELECTED_COLOR }}"
           echo "### Hello World! :rocket:" >> $GITHUB_STEP_SUMMARY
 
       - name: Get color
