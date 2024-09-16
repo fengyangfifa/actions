@@ -28,4 +28,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: the job has succeeded
-        run: echo "status ${{success()}}"
+        run: echo "status ${{ success() }}"
