@@ -1,5 +1,5 @@
 name: Example Workflow For Json Files
-run-name: ${{ github.actor }} is Json action
+run-name: ${{ github.actor }} is json action
 on: push
 jobs:
   job1:
@@ -16,6 +16,4 @@ jobs:
     strategy:
       matrix: ${{ fromJSON(needs.job1.outputs.matrix) }}
     steps:
-      - run: |
-          echo "Matrix - Project ${{ matrix.project }}, Config ${{ matrix.config }}"
-          echo "pre job ${{ steps.set-matrix.outputs.matrix }}"
+      - run: echo "Matrix - Project ${{ matrix.project }}, Config ${{ matrix.config }}"
