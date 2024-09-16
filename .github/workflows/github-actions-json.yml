@@ -27,4 +27,5 @@ jobs:
     needs: job2
     runs-on: ubuntu-latest
     steps:
-      - name: "the job has succeeded ${{success()}}"
+      - name: the job has succeeded
+        run: echo "status ${{success()}}"
