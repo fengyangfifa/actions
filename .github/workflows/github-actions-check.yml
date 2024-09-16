@@ -1,0 +1,14 @@
+name: Example Workflow for Check Files
+run-name: ${{ github.actor }} is check action
+on: push
+jobs:
+  job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Failing step
+        id: demo
+        run: exit 1
+
+      - name: the demo step has failed
+        if: ${{ failure() && steps.demo.conclusion == 'failure' }}
+        run: echo "demo failed"
