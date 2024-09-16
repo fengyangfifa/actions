@@ -24,9 +24,7 @@ jobs:
       - run: echo "Matrix - Project ${{ matrix.project }}, Config ${{ matrix.config }}"
 
   job3:
+    needs: job2
     runs-on: ubuntu-latest
     steps:
-      - continue-on-error: ${{ fromJSON(env.continue) }}
-        timeout-minutes: ${{ fromJSON(env.time) }}
-        run: echo ...
-      - run: echo "${{ env.continue }} - ${{ env.time }}"
+      - name: "the job has succeeded ${{success()}}"
