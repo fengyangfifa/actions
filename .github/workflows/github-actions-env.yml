@@ -17,6 +17,8 @@ jobs:
   Use-Vars:
     needs: Set-And-Use-Env-Vars
     runs-on: ubuntu-latest
+    env:
+      ENV_RUNNER: ${{ vars.RUNNER }}
     steps:
       - name: Use variable
-        run: echo "The value of MY_ENV_VAR is - ${{ vars.RUNNER }} - $name"
+        run: echo "The value of MY_ENV_VAR is - $ENV_RUNNER - $name"
