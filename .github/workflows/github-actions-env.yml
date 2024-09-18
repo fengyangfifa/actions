@@ -19,4 +19,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Use variable
-        run: echo "The value of MY_ENV_VAR is - ${{ vars.RUNNER }} - ${{ env.RUNNER }}"
+        run: echo "The value of MY_ENV_VAR is - ${{ vars.RUNNER }} - ${{ env.RUNNER }} - ${{ vars.MY_ENV_VAR }}"
