@@ -1,0 +1,13 @@
+name: Test matrix
+run-name: ${{ github.actor }} is matrix action
+on: push
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        node: [14, 16]
+    steps:
+      - name: Output node version
+        run: node --version
