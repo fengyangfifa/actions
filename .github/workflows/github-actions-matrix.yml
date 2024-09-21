@@ -12,5 +12,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
-      - name: Output node version
+      - name: Output node version ${{matrix.node}}
         run: node --version
