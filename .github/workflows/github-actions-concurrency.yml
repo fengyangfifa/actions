@@ -9,4 +9,4 @@ jobs:
       cancel-in-progress: ${{ contains(github.ref, 'main') }}
     steps:
       - name: first step
-        run: echo "the is step."
+        run: echo "the is step.."
