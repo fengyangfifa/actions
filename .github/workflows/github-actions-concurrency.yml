@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     concurrency:
       group: staging_env
-      cancel-in-progress: true
+      cancel-in-progress: ${{ !contains(github.ref, 'main') }}
     steps:
       - name: first step
-        run: echo "the is step"
+        run: echo "the is step."
