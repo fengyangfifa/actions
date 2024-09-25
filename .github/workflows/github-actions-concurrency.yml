@@ -1,0 +1,12 @@
+name: Example Workflow for Concurrency Files
+run-name: ${{ github.actor }} is concurrency action
+on: push
+jobs:
+  job:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: staging_env
+      cancel-in-progress: true
+    steps:
+      - name: first step
+        run: echo "the is step"
