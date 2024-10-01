@@ -10,7 +10,7 @@ jobs:
           node-version: "20"
       - name: optput node version
         run: node -v
-      - name: Cache node modules ${{  }}
+      - name: Cache node modules
         id: cache-npm
         uses: actions/cache@v3
         env:
