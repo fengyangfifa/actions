@@ -1,6 +1,6 @@
 name: composite action
 run-name: ${{ github.actor }} is composite action
-on: push
+on: [push]
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
@@ -11,7 +11,7 @@ jobs:
         uses: fengyangfifa/composite-action@v1
         with:
           who-to-greet: 'Mona the Octocat'
-      - run: echo random-numbers "$RANDOM_NUMBER"
+      - run: echo random-number "$RANDOM_NUMBER"
         shell: bash
         env:
           RANDOM_NUMBER: ${{ steps.foo.outputs.random-number }}
