@@ -4,7 +4,6 @@ on:
     types:
       - reopened
       - opened
-
 jobs:
   label_issues:
     runs-on: ubuntu-latest
@@ -15,5 +14,5 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
-          NUMBER: ${{ github.event.number }}
+          NUMBER: ${{ github.event.issue.number }}
           LABELS: triage
